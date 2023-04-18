@@ -11,13 +11,13 @@ if(isset($_POST['net'])){
 
 function Computar(){
     $caminhoArquivo = "dados.txt";
-    $arquivo = fopen($caminhoArquivo , "a");
-    $arq = fread($arq, filesize($caminhoArquivo));
-    $net = substr_count( ' '.$votoNet.' ', 'Voto: Netflix' );
+    $arquivo = fopen($caminhoArquivo , "r");
+    $arq = fread($arquivo, filesize($caminhoArquivo));
+    $net = substr_count($arq , "Netflix");
 
-    $contadorPrime = fopen($arquivo, "r");
-    $votoPrime = fread($contadorPrime, filesize($arquivo));
-    $prime = substr_count( ' '.$votoprime.' ', 'Voto: Prime Video' );
+    $contadorPrime = fopen($caminhoArquivo, "r");
+    $votoPrime = fread($contadorPrime, filesize($caminhoArquivo));
+    $prime = substr_count($arq , "Prime Video");
 
     if($net > $prime){
         $arquivo = fopen("dados.txt", "a");
@@ -87,7 +87,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['computar'])){
     
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="img/netTeste.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <p class="card-text">Netflix</p>
                                     <input type="submit" value="Netflix" name="net">
@@ -96,7 +96,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST" && isset($_POST['computar'])){
                         </div>
                         <div class="col">
                             <div class="card" style="width: 18rem;">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="img/amazon.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <p class="card-text">Prime Video</p>
                                     <input type="submit" value="Prime Video" name="prime">
