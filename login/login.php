@@ -17,9 +17,9 @@
             if(isset($emailteste) && isset($senhateste)){
                 if(str_contains($texto , $emailteste) && str_contains($texto , $senhateste)){
                     echo 
-                    "<div class=classeDivPHP>" . $_POST['emailLogin'] . " logado com sucesso." . "</div>";    
+                    "<div class=classeDivPHP>" . $_POST['emailteste'] . " logado com sucesso." . "</div>";    
                 }else{
-                    echo "<div class=classeDivPHP> <a href=index.php> <button>Cadastrar-se</button> </a> </div> <br>";
+                    echo "<div class=classeDivPHP> <a href=cadastro.php> <button>Cadastrar-se</button> </a> </div> <br>";
                     echo "<div class=classeDivPHP> Usuário não encontrado </div>";
                 }
             }else{
