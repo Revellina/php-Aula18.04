@@ -1,0 +1,39 @@
+.body{
+    background: linear-gradient(-45deg, #DA70D6, 	#9932CC, #A020F0) no-repeat;
+    height: 100vh;
+    animation: gradient 15s ease infinite;
+}
+
+.form-test{
+    text-align: center;
+}
+
+.form-hp{
+    width: 18%;
+}
+
+.form-flor{
+    margin:auto;
+    
+    display: block;
+}
+
+.h1{
+    text-align: center;
+}
+
+.card{
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+
+
